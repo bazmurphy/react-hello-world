@@ -15,7 +15,7 @@ const App = () => {
       <h2><span className="from">by</span> Baz</h2>
       <span className="emoji">😎</span>
       <button className="button" onClick={() => setCount((count) => count + 1)}>
-        React.useState()<br />Counter: {count}
+        React.useState( )<br />Counter: <span className="count">{count}</span>
       </button>
     </div>
   )

@@ -16,9 +16,10 @@ body {
 
 .App {
   color: hsla(0, 0%, 100%, 0.85);
-  background-color: hsl(0, 0%, 15%);
+  background: radial-gradient(circle, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 20%) 100%);
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  text-shadow: 3px 3px 1px hsla(0, 0%, 0%, 1);
   
   padding: 20px 40px;
 
@@ -67,11 +68,11 @@ h2 {
 }
 
 .button {
-  padding: 10px;
-  border: 2px solid hsl(190, 100%, 80%);
+  padding: 10px 20px;
+  border: 2px solid hsl(190, 100%, 90%);
   border-radius: 10px;
 
-  background-color: hsl(190, 100%, 60%);
+  background: radial-gradient(circle, hsl(190, 100%, 50%) 0%, hsl(190, 100%, 70%) 100%);
 
   font-family: inherit;
   font-size: 1rem;
@@ -81,8 +82,12 @@ h2 {
 }
 
 .button:hover {
-  background-color: hsl(190, 100%, 80%);
   border: 2px solid hsl(190, 100%, 60%);
+  transition: 0.5s;
+}
+
+.count {
+  font-weight: 600;
 }
 
 @keyframes rotation {
