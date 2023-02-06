@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  background-color: black;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+}
+
+.App {
+  color: hsla(0, 0%, 100%, 0.85);
+  background-color: hsl(0, 0%, 15%);
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+  padding: 20px 40px;
+
+  min-width: 100px;
+
+  display: grid;
+  justify-items: center;
+  row-gap: 20px;
+
+  border: 2px solid hsla(0, 0%, 100%, 0.85);
+  border-radius: 10px;
+}
+
+.logo {
+  animation: rotation 2s infinite linear;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+.from {
+  font-size: 0.9rem;
+}
+
+.emoji {
+  display: block;
+  text-align: center;
+  transition: 0.50s;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.emoji:hover,
+.emoji:focus {
+  transition: 0.50s;
+  transform: rotate(180deg);
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+.button {
+  padding: 10px;
+  border: 2px solid hsl(190, 100%, 80%);
+  border-radius: 10px;
+
+  background-color: hsl(190, 100%, 60%);
+
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+
+  transition: 0.5s;
+}
+
+.button:hover {
+  background-color: hsl(190, 100%, 80%);
+  border: 2px solid hsl(190, 100%, 60%);
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
