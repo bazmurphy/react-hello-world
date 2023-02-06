@@ -3,11 +3,8 @@
   margin: 0;
 }
 
-:root {
-  background-color: black;
-}
-
 body {
+  background-color: black;
   display: grid;
   height: 100vh;
   justify-content: center;
@@ -15,26 +12,35 @@ body {
 }
 
 .App {
+  display: grid;
+  justify-items: center;
+  row-gap: 20px;
+
+  min-width: 100px;
+  padding: 20px 40px;
+
+  border: 2px solid hsla(0, 0%, 100%, 0.85);
+  border-radius: 10px;
+
   color: hsla(0, 0%, 100%, 0.85);
   background: radial-gradient(circle, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 20%) 100%);
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   text-shadow: 3px 3px 1px hsla(0, 0%, 0%, 1);
   
-  padding: 20px 40px;
-
-  min-width: 100px;
-
-  display: grid;
-  justify-items: center;
-  row-gap: 20px;
-
-  border: 2px solid hsla(0, 0%, 100%, 0.85);
-  border-radius: 10px;
 }
 
 .logo {
   animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 h1 {
@@ -46,6 +52,10 @@ h2 {
 }
 
 .from {
+  font-size: 0.8rem;
+}
+
+.by {
   font-size: 0.9rem;
 }
 
@@ -63,10 +73,6 @@ h2 {
   transform: rotate(180deg);
 }
 
-.small {
-  font-size: 0.8rem;
-}
-
 .button {
   padding: 10px 20px;
   border: 2px solid hsl(190, 100%, 90%);
@@ -81,20 +87,12 @@ h2 {
   transition: 0.5s;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   border: 2px solid hsl(190, 100%, 60%);
   transition: 0.5s;
 }
 
 .count {
   font-weight: 600;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
 }
